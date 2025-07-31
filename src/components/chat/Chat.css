@@ -1,0 +1,20 @@
+/* CSS Styles for Chat Component */
+.chat-bubble-left {
+  @apply px-[12px] py-[10px] rounded-[10px] inline-block rounded-tl-none;
+}
+
+.chat-bubble-right {
+  @apply px-[12px] py-[10px] rounded-[10px] inline-block rounded-br-none;
+}
+
+.chat-bubble-default {
+  @apply bg-secondary-300 text-chat;
+}
+
+.chat-bubble-primary {
+  @apply bg-primary text-secondary-100;
+}
+
+.chat-bubble-highlight {
+  @apply bg-highlight-100 text-secondary-100;
+}

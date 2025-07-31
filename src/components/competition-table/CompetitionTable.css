@@ -1,0 +1,26 @@
+/* CSS Styles for CompetitionTable Component */
+.table {
+  @apply w-full min-h-[656px] bg-gridLine shadow rounded-[3px] grid grid-cols-6 auto-rows-fr 
+    gap-px base:w-[984px] base:max-h-[790px];
+}
+
+.table-top-header {
+  @apply px-[15px] flex justify-center items-center bg-secondary-100 text-primary text-base 
+    font-normal leading-5 text-center;
+}
+
+.table-left-header {
+  @apply p-[20px] bg-secondary-100 text-primary text-base font-normal leading-5 text-left;
+}
+
+.table-cell {
+  @apply p-[20px] flex justify-center items-center bg-secondary-100;
+}
+
+.bullet {
+  @apply w-[20px] h-[20px] rounded-full bg-primary;
+}
+
+.bullet-highlight {
+  @apply w-[20px] h-[20px] rounded-full bg-highlight-100;
+}

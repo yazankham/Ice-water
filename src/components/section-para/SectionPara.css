@@ -1,0 +1,32 @@
+/* CSS Styles for SectionPara Component */
+.sec-para {
+  @apply text-base font-normal;
+}
+
+.sec-text-center {
+  @apply text-center;
+}
+
+.sec-text-left {
+  @apply text-left;
+}
+
+.sec-text-right {
+  @apply text-right;
+}
+
+.sec-text-primary {
+  @apply text-primary;
+}
+
+.sec-text-secondary {
+  @apply text-secondary-100;
+}
+
+.sec-text-leading-5 {
+  @apply leading-5;
+}
+
+.sec-text-leading-6 {
+  @apply leading-6;
+}

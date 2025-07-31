@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes ripple {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+@keyframes pulseBackground {
+  0%, 100% {
+    filter: contrast(115%) brightness(110%) saturate(120%) drop-shadow(0 0 6px #66ccff);
+  }
+  50% {
+    filter: contrast(125%) brightness(115%) saturate(140%) drop-shadow(0 0 12px #33aaff);
+  }
+}

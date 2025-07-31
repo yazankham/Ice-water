@@ -1,0 +1,66 @@
+{
+  "name": "awesome-container-company",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://5hraddha.github.io/awesome-container-company",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "aws": "^0.0.3-2",
+    "axios": "^0.26.1",
+    "classnames": "^2.3.1",
+    "framer-motion": "^6.2.8",
+    "heroku": "^7.60.1",
+    "hey-listen": "^1.0.8",
+    "i18next": "^25.3.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-compare-slider": "^2.2.0",
+    "react-dom": "^17.0.2",
+    "react-helmet-async": "^1.2.3",
+    "react-hook-form": "^7.28.1",
+    "react-i18next": "^15.6.1",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+    "tw-elements": "^1.0.0-alpha11",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start-server": "cd server && npm install && npm start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23"
+  }
+}

@@ -1,0 +1,12 @@
+/* CSS Styles for Carousel Component */
+.carousel-back-icon {
+  @apply w-[24px] h-[24px] bg-[url('../../images/carousel-back.svg')] bg-no-repeat bg-center bg-contain;
+}
+
+.carousel-forward-icon {
+  @apply w-[24px] h-[24px] bg-[url('../../images/carousel-forward.svg')] bg-no-repeat bg-center bg-contain;
+}
+
+.list-icon {
+  @apply w-[10px] h-[10px] bg-[url('../../images/bullet-points.svg')] bg-no-repeat bg-center bg-cover justify-self-center;
+}

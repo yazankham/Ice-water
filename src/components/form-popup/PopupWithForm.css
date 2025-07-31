@@ -1,0 +1,48 @@
+/* CSS Styles for PopupWithForm Component */
+.button-invalid {
+    @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 opacity-50 transition-all text-secondary-100 text-lg leading-7 md:px-[15px] md:py-[10px] md:text-base sm:w-full;
+}
+
+.button-form {
+  @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7 md:px-[15px] md:py-[10px] md:text-base sm:w-full;
+}
+
+.form-popup {
+  @apply opacity-0 flex justify-center items-center fixed inset-0 bg-black bg-opacity-60 z-[-1000] ease-in-out duration-500;
+}
+
+.form-open {
+  @apply opacity-100 z-[10000];
+}
+
+.form-close {
+  @apply w-[16.5px] h-[16.5px] bg-[url('../../images/form-close.svg')] bg-no-repeat bg-center bg-contain border-none absolute top-[24px] right-[24px] base:top-[20px] base:right-[20px];
+}
+
+.labels {
+  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px] md:mb-[30px] md:w-[490px] sm:w-[330px] sm:p-[7px] sm:h-[40px] sm:mb-[20px] xs:w-full;
+}
+
+.labels-invalid {
+  @apply border-[1px] border-[#E30613] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px] md:mb-[30px] md:w-[490px] sm:w-[330px] sm:p-[7px] sm:h-[40px] sm:mb-[20px] xs:w-full;
+}
+
+.inputs {
+  @apply border-transparent outline-none w-full break-words h-full sm:text-sm;
+}
+
+.textarea {
+  @apply border-transparent outline-none w-full break-words resize-none h-[140px] sm:h-[100px] sm:text-sm;;
+}
+
+.textarea-label {
+  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px] md:mb-[30px] md:w-[490px] sm:w-[330px] sm:p-[7px] sm:h-[115px] sm:mb-[20px] xs:w-full;
+}
+
+.form-container {
+  @apply relative w-[760px] min-h-[778px] bg-white px-[80px] py-[40px] rounded-[3px] shadow-sm base:w-[680px] base:px-[40px] base:min-h-[750px] md:w-[550px] md:px-[30px] md:min-h-[670px] sm:w-[370px] sm:min-h-[525px] sm:px-[20px] xs:w-[310px];
+}
+
+.form-thankyou {
+  @apply relative w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm base:w-[680px] base:px-[40px] base:h-[750px] md:w-[550px] md:px-[30px] md:h-[670px] sm:w-[370px] sm:h-[525px] sm:px-[20px] xs:w-[310px] flex;
+}

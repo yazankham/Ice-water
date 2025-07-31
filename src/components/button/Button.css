@@ -1,0 +1,8 @@
+/* CSS Styles for Button Component */
+.button {
+  @apply py-[16px] px-[28px] rounded-[3px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
+}
+
+.button-header {
+  @apply py-[13px] px-[24px] rounded-[3px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-sm leading-4;
+}
