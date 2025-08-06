@@ -50,7 +50,7 @@ function Footer({ data }) {
 						</SectionHeading>
 					</div>
 					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com">
-						<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of awesome container company" />
+						<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of Al-khamayseh Beverage company" />
 						{social.instagram}
 					</a>
 				</div>
@@ -63,7 +63,7 @@ function Footer({ data }) {
 						We currently operate in:<br />{activeInCountries}
 					</p>
 					<p className="max-w-[386px]">
-						Planning to launch in 2022:<br />
+						Planning to launch soon in :<br />
 						{planningToBeActiveInCountries}
 					</p>
 				</div>

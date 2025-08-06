@@ -1,0 +1,45 @@
+.review-section {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.review-section h2 {
+  text-align: center;
+}
+
+.review-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-section textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.review-section button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.review-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.review-section li {
+  margin-bottom: 16px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}

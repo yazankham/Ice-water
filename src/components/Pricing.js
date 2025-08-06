@@ -8,20 +8,15 @@ import {
   sectionVariants,
   pricingCalloutVariants
 } from '../utils/animationVariants';
-import pricingContainer from '../images/pricing-section-container.svg';
+import pricingContainer from '../images/ChatGPT Image Aug 6, 2025, 03_23_22 AM.png';
 
-/**
- * The **Pricing** component represents the section where the company pricing details have been discussed.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 function Pricing({ onButtonClick }) {
 
   // Classes for JSX Elements
   const pricingSectionContainerClass = `mx-auto px-[82px] max-w-[1440px] flex flex-col items-center 
     lg:px-[40px] md:px-[20px] sm:px-[16px]`;
-  const pricingCalloutClass = `ml-[31px] px-[42px] py-[37px] w-full min-h-[158px] 
+  const pricingCalloutClass = `ml-[25px] px-[30px] py-[30px] w-full min-h-[158px] 
     bg-[url('./images/pricing-section-callout.svg')] bg-no-repeat bg-center bg-contain 
     flex justify-center items-center md:ml-[0px] md:bg-[url('./images/pricing-section-callout-tablet.svg')] 
     md:min-h-[350px] sm:min-h-[192px]`;
@@ -53,7 +48,9 @@ function Pricing({ onButtonClick }) {
             viewport={{ once: true }}
             className={pricingCalloutClass}>
             <p className={pricingCalloutTextClass}>
-              We calculate our prices according to the amount of containers and deliveries made by your business monthly.
+              Our pricing model is transparent and scalable, based on your monthly water consumption and delivery frequency. 
+              This ensures you receive the highest quality service at a competitive rate, 
+              tailored specifically to your operational needs 
             </p>
           </motion.div>
         </div>

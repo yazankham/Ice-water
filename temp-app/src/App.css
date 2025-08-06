@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.review-section {
+  background: #115A77;
+  color: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 2px 12px rgba(17,90,119,0.15);
+}
+
+.review-section h2 {
+  color: #B2892D;
+  margin-bottom: 24px;
+}
+
+.review-section .star-icon {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.review-section .star-icon:hover {
+  transform: scale(1.15);
+}
+
+.review-section button {
+  background: #B2892D;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+}

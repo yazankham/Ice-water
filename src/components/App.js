@@ -18,6 +18,7 @@ const Competition = lazy(() => import('./competition/Competition'));
 const Sustainability = lazy(() => import('./Sustainability'));
 const Pricing = lazy(() => import('./Pricing'));
 const AwesomeTeam = lazy(() => import('./AwesomeTeam'));
+const ReviewSection = lazy(() => import('./reviews/review'));
 // const AwesomePartners = lazy(() => import('./AwesomePartners'));
 const Footer = lazy(() => import('./Footer'));
 const PopupWithForm = lazy(() => import('./form-popup/PopupWithForm'));
@@ -149,6 +150,7 @@ function App() {
                   <Sustainability />
                   <Pricing onButtonClick={handleButtonClick} />
                   <AwesomeTeam data={awesomeTeam} />
+                  <ReviewSection />
                   {/* <AwesomePartners data={awesomePartners} /> */}
                 </Suspense>
               </main>

@@ -6,12 +6,7 @@ import CompetitionTable from '../competition-table/CompetitionTable';
 import { sectionVariants } from '../../utils/animationVariants';
 import './Competition.css';
 
-/**
- * The **Competition** component represents the competition details of the company.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 function Competition({ data }) {
   const { title, table } = data;
 

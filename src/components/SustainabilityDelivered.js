@@ -38,12 +38,12 @@ function SustainabilityDelivered({ data }) {
       <div className={sustainabilityDelSectionContainerClass}>
         <div className="flex flex-col items-center xs:hidden">
           <SectionHeading align="center" color="primary">
-            Sustainability Delivered
+            Photos from our premises
           </SectionHeading>
           <div className="my-[40px] w-full max-w-[598px] md:mb-[60px] sm:my-[32px]">
             <SectionPara align="center" color="primary" lineHeight="6">
               <span className="text-highlight-100">
-                Awesome Container Company
+                Al-Khamayseh Beverage Company
               </span>{" "}
               replaces single-use packaging with reusable stainless steel
               containers

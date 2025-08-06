@@ -1,5 +1,5 @@
 const emailToSend = {
-  email: "alecdrosu@yahoo.com",
+  email: "yatya616@gmail.com",
 };
 
 const emailSource = {

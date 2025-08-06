@@ -9,12 +9,7 @@ import useInterval from '../../hooks/useInterval';
 import { chatVariants } from '../../utils/animationVariants';
 import './Chat.css';
 
-/**
- * The **Chat** component represents the chat between admin and guest.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 export function Chat({ chatMessages, onButtonClick }) {
   const [messages, setMessages] = React.useState([]);
 

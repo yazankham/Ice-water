@@ -43,18 +43,19 @@ const data = {
         description: 'Food with awesome containers',
       }
     },
+
     chatMessages: [
       {
         sender: 'guest',
         color: 'default',
         hasOnClickEvent: false,
-        message: 'What do you do?',
+        message: 'Hey! What do you offer?',
       },
       {
         sender: 'admin',
         color: 'primary',
         hasOnClickEvent: false,
-        message: 'We provide reusable containers for restaurants, pick them up from users, clean them and give them back to your restaurant',
+        message: ' We bottle and deliver high-quality filtered drinking water straight from our facility in Hebron – clean, safe, and refreshingly local.',
       },
       {
         sender: 'guest',
@@ -66,18 +67,18 @@ const data = {
         sender: 'guest',
         color: 'highlight',
         hasOnClickEvent: true,
-        message: 'I want to work with you!',
+        message: ' Do you deliver to my area',
       },
       {
         sender: 'admin',
         color: 'primary',
         hasOnClickEvent: false,
-        message: 'Cool! We operate in Singapore and are planning to open in Many other countries soon!',
+        message: 'We currently deliver across most areas in Palestine. Just share your location and we well confirm availability!',
       },
     ]
   },
+
   plasticsBadEffects:[ 
-  
   {
     title: ' Founded by Vision',
     text: 'The company was established by Mr. Nimer Khmayseh, who believes in investing in vital industries that serve the community and provide trusted local products with high standards.',
@@ -285,18 +286,19 @@ const data = {
     ],
   },
   footer: {
-    email: 'Hello@AwesomeContainers.com',
+    email: 'Hello@KhamaysehBeverage.com',
     address: {
-      line1: '71 UBI Road 1, #08-42,',
-      line2: 'Oxley Bizhub,',
-      country: 'Singapore',
-      postcode: '408732',
+      line1: 'Taffouh,',
+      line2: 'Hebron,',
+      country: 'palestine,',
+      postcode: '9020000',
     },
     social: {
-      instagram: 'AwesomeContainers',
+      instagram: 'Al-Khamayseh Beverage Company',
+      profile: 'https://www.instagram.com/yazankh_7?igsh=MW91ajJyaW1xcmF1Mg%3D%3D&utm_source=qr',
     },
-    activeInCountries: 'Singapore',
-    planningToBeActiveInCountries: 'UK, EU, OSEAN, China, Vietnam, Malaysia, Taiwan',
+    activeInCountries: 'Palestine',
+    planningToBeActiveInCountries: 'Jordan, Lebanon, Egypt, UAE, Saudi Arabia, Qatar, Oman, Kuwait',
   }
 }
 

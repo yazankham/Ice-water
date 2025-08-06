@@ -46,10 +46,16 @@ function NavBar(props) {
     <nav className={navSectionClass}>
       <div className={navSectionContainerClass}>
         <div className="w-auto relative flex justify-start base:justify-between base:items-center">
-          <AnchorLink className={logoLinkContainerClass} onClick={handleLinkClick} href="#hero" aria-label="navigate to hero section">
+          <a
+            className={logoLinkContainerClass}
+            href="https://www.instagram.com/yazankh_7?igsh=MW91ajJyaW1xcmF1Mg%3D%3D&utm_source=qr" // ← use your profile link here
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Al-Khamayseh Beverage Company profile"
+          >
             <Logo />
-           <p className=" text-[20px] font-bold leading-6 ml-[25px] sm:ml-[8px]">Al-Khamayseh Beverage Company</p>
-          </AnchorLink>
+            <p className=" text-[20px] font-bold leading-6 ml-[25px] sm:ml-[8px]">Al-Khamayseh Beverage Company</p>
+          </a>
           <div className="flex gap-x-[30px]">
             <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} aria-label="hamburger menu" />
             <div className="hidden base:block sm:hidden">
@@ -73,7 +79,7 @@ function NavBar(props) {
             </li>
             <li className="flex items-center base:py-[12px]">
               <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#sustainability-delivered" aria-label="navigate to solution section">
-                Sustainable Solution
+                Images
               </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
@@ -87,8 +93,8 @@ function NavBar(props) {
               </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#awesome-team" aria-label="navigate to team section">
-                Team
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#review" aria-label="navigate to team section">
+                Reviews
               </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">

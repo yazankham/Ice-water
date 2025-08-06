@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Carousel.css';
 
-/**
- * The **Carousel** component makes use of 'Tailwind Elements' library to make a gallery.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 function Carousel({ slides }) {
   const renderListItems = (list) => (
     list.map((item, index) => (

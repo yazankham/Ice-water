@@ -5,12 +5,7 @@ import {
   ReactCompareSliderImage
 } from 'react-compare-slider';
 
-/**
- * The **ImageCompareSlider** component represents a slider to compare two images.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 function ImageCompareSlider({ imagesToCompare }) {
   const { firstImg, secondImg } = imagesToCompare;
 
