@@ -12,12 +12,12 @@ import data from '../constants/data';
 
 // Code-split on a component level using dynamic imports
 const SustainabilityDelivered = lazy(() => import('./SustainabilityDelivered'));;
-const HowItWorks = lazy(() => import('./HowItWorks'));
+// const HowItWorks = lazy(() => import('./HowItWorks'));
 const Impact = lazy(() => import('./Impact'));
 const Competition = lazy(() => import('./competition/Competition'));
 const Sustainability = lazy(() => import('./Sustainability'));
 const Pricing = lazy(() => import('./Pricing'));
-const AwesomeTeam = lazy(() => import('./AwesomeTeam'));
+// const AwesomeTeam = lazy(() => import('./AwesomeTeam'));
 const ReviewSection = lazy(() => import('./reviews/review'));
 // const AwesomePartners = lazy(() => import('./AwesomePartners'));
 const Footer = lazy(() => import('./Footer'));
@@ -45,10 +45,10 @@ function App() {
     hero,
     plasticsBadEffects,
     sustainabilityDeliveredSlides,
-    howItWorks,
+    // howItWorks,
     impacts,
     competition,
-    awesomeTeam,
+    // awesomeTeam,
     footer,
   } = data;
 
@@ -144,12 +144,12 @@ function App() {
                 <BadEffects data={plasticsBadEffects} />
                 <Suspense fallback={renderLoader()}>
                   <SustainabilityDelivered data={sustainabilityDeliveredSlides} />
-                  <HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
+                  {/* <HowItWorks data={howItWorks} onButtonClick={handleButtonClick} /> */}
                   <Impact data={impacts} />
                   <Competition data={competition} />
                   <Sustainability />
                   <Pricing onButtonClick={handleButtonClick} />
-                  <AwesomeTeam data={awesomeTeam} />
+                  {/* <AwesomeTeam data={awesomeTeam} /> */}
                   <ReviewSection />
                   {/* <AwesomePartners data={awesomePartners} /> */}
                 </Suspense>

@@ -4,8 +4,8 @@ import foodWithAwesomeContainer       from '../images/water before.png';
 
 // Images for slides in SustainabilityDelivered section
 import containerImage25oz             from '../images/Winter (Flyer).png';
-import containerImage16oz             from '../images/gallery-containers-2.png';
-import containerImage100oz            from '../images/gallery-containers-3.png';
+// import containerImage16oz             from '../images/gallery-containers-2.png';
+// import containerImage100oz            from '../images/gallery-containers-3.png';
 
 // Images for circular ecosystem in HowItWorks section
 import HowItWorksImg1                 from '../images/how-it-works-1.svg';
@@ -126,7 +126,7 @@ const data = {
     },
     {
       id: 2,
-      image: containerImage16oz,
+      image: containerImage25oz,
       features: [
         'Leak-resistant lid keeps food fresh',
         'Easy to sanitize and dishwasher safe',
@@ -146,7 +146,7 @@ const data = {
     },
     {
       id: 3,
-      image: containerImage100oz,
+      image: containerImage25oz,
       features: [
         'Removable 2-section + 4-section divider',
         'Leak-resistant lid keeps food fresh',

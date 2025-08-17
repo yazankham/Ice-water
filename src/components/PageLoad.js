@@ -10,7 +10,7 @@ function PageLoad({ data }) {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">
-      {/* ✅ الخلفية المتحركة منفصلة */}
+      {/*  الخلفية المتحركة منفصلة */}
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat pointer-events-none z-0 animate-pulseBackground"
         style={{
@@ -20,7 +20,7 @@ function PageLoad({ data }) {
         }}
       />
 
-      {/* ✅ الواجهة الرئيسية فوق الخلفية */}
+      {/*  الواجهة الرئيسية فوق الخلفية */}
       <motion.div
         className="relative z-10 w-full h-full p-5 flex flex-col justify-center items-center"
       >

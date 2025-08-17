@@ -42,20 +42,25 @@ function NavBar(props) {
     }
   }
 
+  // دالة إعادة تحميل الصفحة عند الضغط على العنوان (فقط في أعلى الصفحة)
+  const handleLogoClick = () => {
+    // التحقق من أن المستخدم في أعلى الصفحة (Hero section)
+    if (window.scrollY < 100) {
+      window.location.reload();
+    } else {
+      // إذا كان المستخدم في مكان آخر، إعادة التوجيه إلى أعلى الصفحة
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   return (
     <nav className={navSectionClass}>
       <div className={navSectionContainerClass}>
         <div className="w-auto relative flex justify-start base:justify-between base:items-center">
-          <a
-            className={logoLinkContainerClass}
-            href="https://www.instagram.com/yazankh_7?igsh=MW91ajJyaW1xcmF1Mg%3D%3D&utm_source=qr" // ← use your profile link here
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Al-Khamayseh Beverage Company profile"
-          >
+          <div className={logoLinkContainerClass} onClick={handleLogoClick} aria-label="إعادة تحميل الصفحة">
             <Logo />
-            <p className=" text-[20px] font-bold leading-6 ml-[25px] sm:ml-[8px]">Al-Khamayseh Beverage Company</p>
-          </a>
+           <p className=" text-[20px] font-bold leading-6 ml-[25px] sm:ml-[8px]">Al-Khamayseh Beverage Company</p>
+          </div>
           <div className="flex gap-x-[30px]">
             <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} aria-label="hamburger menu" />
             <div className="hidden base:block sm:hidden">
@@ -84,7 +89,7 @@ function NavBar(props) {
             </li>
             <li className="flex items-center base:py-[12px]">
               <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#impact" aria-label="navigate to impact section">
-                Impact
+                Our Services
               </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
@@ -94,7 +99,7 @@ function NavBar(props) {
             </li>
             <li className="flex items-center base:py-[12px]">
               <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#review" aria-label="navigate to team section">
-                Reviews
+                reviews
               </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">

@@ -2,12 +2,7 @@ import React from 'react';
 import accLogo from '../images/لوجو شركة الخمايسة 2.png';
 import accLogoTilted from '../images/Winter (Flyer).png';
 
-/**
- * The **Logo** component represents the logo of the page.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 function Logo() {
   const [logoImage, setLogoImage] = React.useState(accLogo);
 

@@ -4,12 +4,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from './section-heading/SectionHeading';
 import { sectionVariants } from '../utils/animationVariants';
 
-/**
- * The **AwesomePartners** component representing the list of partners of the company.
- *
- * @version 1.0.0
- * @author [Alec Drosu](https://github.com/AlecDrosu)
- */
+
 function AwesomePartners({ data }) {
 	const { title, logos } = data;
 

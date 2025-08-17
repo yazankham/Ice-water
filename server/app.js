@@ -13,17 +13,14 @@ app.use(Router);
 app.use(express.static("public"));
 app.use(express.static("../build"));
 
-app.use((req, res, next) => {
-  res.sendFile("../build/index.html");
-});
+// app.use((req, res, next) => {
+//   res.sendFile("../build/index.html");
+// });
 
 const port = process.env.PORT || 3000;
 
-app.get("/hello", (req, res) => {
-  res.status(200).send("Hello World");
-});
-
 app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
   console.log(`Listening on port ${port}`);
 });
 

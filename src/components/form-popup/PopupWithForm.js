@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import "./PopupWithForm.css";
 
 function PopupWithForm(props) {
@@ -12,22 +10,75 @@ function PopupWithForm(props) {
     setFormSubmitted
   } = props;
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { isValid, errors },
-  } = useForm({ mode: "onChange", });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
 
-  const onSubmit = (data) => {
-    console.log(data);
-    axios.post('https://awesome-container-company.herokuapp.com/email', data);
-    setFormSubmitted(true);
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!name.trim()) {
+      newErrors.name = 'Personal or company name is required';
+    }
+    
+    if (!email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    const data = {
+      name,
+      email,
+      message,
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/email', { // غيّر الرابط إذا السيرفر على دومين تاني
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Email sent successfully!');
+        // إعادة تعيين الحقول
+        setName('');
+        setEmail('');
+        setMessage('');
+        setErrors({});
+        setFormSubmitted(true);
+      } else {
+        alert('Failed to send email');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('An error occurred while sending email');
+    }
   };
 
   React.useEffect(() => {
-    reset();
-  }, [isOpen, reset]);
+    if (isOpen) {
+      setName('');
+      setEmail('');
+      setMessage('');
+      setErrors({});
+    }
+  }, [isOpen]);
 
   React.useEffect(() => {
     let timer;
@@ -47,7 +98,7 @@ function PopupWithForm(props) {
           className="form-container"
           noValidate
           method="POST"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleFormSubmit}
         >
           <button
             type="button"
@@ -61,46 +112,39 @@ function PopupWithForm(props) {
           </h2>
           <div className="flex flex-col max-w-[600px]">
             <div
-              className={`text-sm pb-[11px] ${errors.name ? "text-[#E30613]" : "text-primary"
-                }`}
+              className={`text-sm pb-[11px] ${errors.name ? "text-[#E30613]" : "text-primary"}`}
             >
-              {errors.name
-                ? "Personal or company name * (This field is required)"
-                : "Personal or company name *"}
+              {errors.name || "Personal or company name *"}
             </div>
             <label
               name="entry.1377521493"
-              className={`h-[60px] ${errors.name ? "labels-invalid" : "labels"
-                }`}
+              className={`h-[60px] ${errors.name ? "labels-invalid" : "labels"}`}
             >
               <input
                 type="text"
                 aria-label="Personal or company name"
                 className="inputs"
                 name="entry.1377521493"
-                {...register("name", { required: true })}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </label>
             <div
-              className={`text-sm pb-[11px] ${errors.email ? "text-[#E30613]" : "text-primary"
-                }`}
+              className={`text-sm pb-[11px] ${errors.email ? "text-[#E30613]" : "text-primary"}`}
             >
-              {errors.email ? "Email * (This field is required)" : "Email *"}
+              {errors.email || "Email *"}
             </div>
             <label
               name="entry.1586441139"
-              className={`h-[60px] ${errors.email ? "labels-invalid" : "labels"
-                }`}
+              className={`h-[60px] ${errors.email ? "labels-invalid" : "labels"}`}
             >
               <input
                 type="email"
                 aria-label="Email"
                 className="inputs"
                 name="entry.1586441139"
-                {...register("email", {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                })}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
             <div className="text-sm pb-[11px] text-primary">
@@ -112,17 +156,15 @@ function PopupWithForm(props) {
                 name="message"
                 type="text"
                 className="textarea"
-                {...register("message", {
-                  required: false,
-                })}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               />
             </label>
           </div>
 
           <button
             type="submit"
-            className={`${!isValid ? "button-invalid" : "button-form"}`}
-            disabled={!isValid}
+            className="button-form"
             aria-label="submit form"
           >
             Send

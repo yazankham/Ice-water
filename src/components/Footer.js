@@ -4,13 +4,10 @@ import { motion } from 'framer-motion';
 import SectionHeading from "./section-heading/SectionHeading";
 import { sectionVariants } from '../utils/animationVariants';
 import instagram from "../images/social-links/instagram.svg";
+import Logo from './Logo';
 
-/**
- * The **Footer** component representing the footer socials links and contacts.
- *
- * @version 1.0.0
- * @author [Alec Drosu](https://github.com/AlecDrosu)
- */
+
+
 function Footer({ data }) {
 	const { email, address, social, activeInCountries, planningToBeActiveInCountries } = data;
 
@@ -21,6 +18,8 @@ function Footer({ data }) {
 		xl:h-[662px] xl:grid-cols-2 xl:grid-rows-3 
 		md:px-[60px] md:max-h-[850px] md:grid-cols-1 md:auto-rows-max 
 		sm:px-[16px]`;
+	const logoLinkContainerClass = `flex items-center text-sm font-bold leading-4 text-primary mr-4 py-2 
+    whitespace-nowrap hover:cursor-pointer sm:text-xs sm:leading-3`;
 
 	return (
 		<motion.footer
@@ -49,10 +48,19 @@ function Footer({ data }) {
 							Follow us
 						</SectionHeading>
 					</div>
-					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com">
+					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com/yazankh_7?igsh=MW91ajJyaW1xcmF1Mg%3D%3D&utm_source=qr">
 						<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of Al-khamayseh Beverage company" />
 						{social.instagram}
 					</a>
+					   <a className={logoLinkContainerClass}
+           					href="https://www.instagram.com/yazankh_7?igsh=MW91ajJyaW1xcmF1Mg%3D%3D&utm_source=qr" // ← use your profile link here
+            				target="_blank"
+           	 				rel="noopener noreferrer"
+            				aria-label="Al-Khamayseh Beverage Company profile">
+            			<Logo />
+            			<p className=" text-[20px] font-bold leading-6 ml-[25px] sm:ml-[8px]">Al-Khamayseh Beverage Company</p>
+          			</a>
+					
 				</div>
 				<div className="min-w-full min-h-full row-span-2 xl:row-start-1 xl:col-start-2 
 						md:row-start-2 md:col-start-1 md:row-span-1">
@@ -70,7 +78,7 @@ function Footer({ data }) {
 				<div className="min-w-full min-h-full col-span-2 flex items-end md:row-start-4 
 						md:col-start-1 md:col-span-1">
 					<div className="flex justify-between gap-x-[40px] md:flex-col md:gap-y-[16px]">
-						<p className="text-sm leading-4">Awesome Container Company © {new Date().getFullYear()}</p>
+						<p className="text-sm leading-4">khamayesh Beverage Company © {new Date().getFullYear()}</p>
 						<p className="text-sm leading-4">Terms of Use</p>
 					</div>
 				</div>

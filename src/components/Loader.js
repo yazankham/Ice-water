@@ -1,11 +1,6 @@
 import React from 'react';
 
-/**
- * The **Loader** component represents the svg loader icon.
- *
- * @version 1.0.0
- * @author [Shraddha](https://github.com/5hraddha)
- */
+
 function Loader() {
   return (
     <svg version="1.1" id="L3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
