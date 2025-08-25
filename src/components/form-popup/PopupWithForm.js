@@ -46,7 +46,7 @@ function PopupWithForm(props) {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/email', { // غيّر الرابط إذا السيرفر على دومين تاني
+      const response = await fetch('/email', { // يستخدم proxy في التطوير
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,18 +56,19 @@ function PopupWithForm(props) {
 
       if (response.ok) {
         alert('Email sent successfully!');
-        // إعادة تعيين الحقول
         setName('');
         setEmail('');
         setMessage('');
         setErrors({});
         setFormSubmitted(true);
       } else {
-        alert('Failed to send email');
+        const errorText = await response.text();
+        console.error('Email send failed:', errorText);
+        alert(errorText || 'Failed to send email');
       }
     } catch (err) {
-      console.error(err);
-      alert('An error occurred while sending email');
+      console.error('Network/Fetch error:', err);
+      alert(`An error occurred while sending email: ${err?.message || ''}`);
     }
   };
 
